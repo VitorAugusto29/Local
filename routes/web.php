@@ -17,5 +17,5 @@ use App\Http\Controllers\HomeController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/photo', HomeController::class, 'photo');
+Route::get('/photo', [HomeController::class, 'photo']);
 
