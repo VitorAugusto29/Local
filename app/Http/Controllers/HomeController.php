@@ -6,7 +6,12 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-  
-    Storage::put('public/file.jpg', $contents);
+    public function photo(Request $request)
+{
+ // Armazenar imagem
+ $path = $request->photo->photo('public/file.jpg');
+
+ return $path;
+}
 
 }
